@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6505166-C5E9-46B8-96BC-2B0D40DDE5BB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AccountManager.Application</RootNamespace>
+    <AssemblyName>AccountManager.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=8.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.0.7\lib\net45\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.8.1.2\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="Irm.Security">
+      <HintPath>..\libs\Irm.Security\Irm.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="MediatR, Version=6.0.0.0, Culture=neutral, PublicKeyToken=bb9a41a5e8aaa7e2, processorArchitecture=MSIL">
+      <HintPath>..\packages\MediatR.6.0.0\lib\net461\MediatR.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.5.2.2\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.2.2\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.4.1\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.ComponentModel.Primitives, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Primitives.4.3.0\lib\net45\System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.2.2\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts\Commands\ActivateAccount\ActivateAccountCommand.cs" />
+    <Compile Include="Accounts\Commands\ActivateAccount\ActivateAccountCommandHandler.cs" />
+    <Compile Include="Accounts\Commands\BatchUpdateAccounts\BatchUpdateAccountsCommandHandler.cs" />
+    <Compile Include="Accounts\Commands\CreateAccount\AccountCreatedEvent.cs" />
+    <Compile Include="Accounts\Commands\CreateAccount\CreateAccountCommand.cs" />
+    <Compile Include="Accounts\Commands\CreateAccount\CreateAccountCommandHandler.cs" />
+    <Compile Include="Accounts\Commands\CreateAccount\CreateAccountCommandValidator.cs" />
+    <Compile Include="Accounts\Commands\CreateMachine\CreateMachineCommand.cs" />
+    <Compile Include="Accounts\Commands\RecreateMachine\MachineRecreatedEvent.cs" />
+    <Compile Include="Accounts\Commands\SendCreationMail\SendCreationMailCommand.cs" />
+    <Compile Include="Accounts\Commands\SendCreationMail\SendCreationMailCommandHandler.cs" />
+    <Compile Include="Accounts\Commands\BatchUpdateAccounts\BatchUpdateAccountsCommand.cs" />
+    <Compile Include="Accounts\Commands\BatchUpdateMachines\BatchUpdateMachinesCommand.cs" />
+    <Compile Include="Accounts\Commands\BatchUpdateMachines\BatchUpdateMachinesCommandHandler.cs" />
+    <Compile Include="Accounts\Commands\UpdateBackupSettings\BackupSettingsPushedEvent.cs" />
+    <Compile Include="Accounts\Commands\UpdateBackupSettings\UpdateBackupSettingsCommandValidator.cs" />
+    <Compile Include="Accounts\Commands\UpdateInstanceSettings\InstanceSettingsPushedEvent.cs" />
+    <Compile Include="Accounts\Commands\UpdateInstanceSettings\UpdateInstanceSettingsCommandValidator.cs" />
+    <Compile Include="Accounts\Commands\UpdateLicenseSettings\LicenseSettingsPushedEvent.cs" />
+    <Compile Include="Accounts\Queries\GetAllCustomers\GetAllCustomersQuery.cs" />
+    <Compile Include="Accounts\Queries\GetCreatableMachinesForAccount\GetCreatableMachinesForAccountQuery.cs" />
+    <Compile Include="Accounts\Queries\GetInfoForAllAccounts\GetInfoForAllAccountsQuery.cs" />
+    <Compile Include="Accounts\Queries\GetInstanceSettingsForAccount\GetInstanceSettingsForAccountQuery.cs" />
+    <Compile Include="Caching\Providers\IMachineCacheProvider.cs" />
+    <Compile Include="Caching\Providers\MachineCacheProvider.cs" />
+    <Compile Include="Cloud\Queries\GetAllImages\GetAllCloudBaseImagesQuery.cs" />
+    <Compile Include="Cloud\Queries\GetAllImages\GetAllCloudBaseImagesQueryHandler.cs" />
+    <Compile Include="Common\Interfaces\IAccountManagerDbContext.cs" />
+    <Compile Include="Common\Interfaces\IAMMongoContext.cs" />
+    <Compile Include="Machine\Commands\ChangeInstanceTypeForMachine\ChangeInstanceTypeForMachineCommand.cs" />
+    <Compile Include="Machine\Commands\ForceBackupForMachine\ForceBackupForMachineCommand.cs" />
+    <Compile Include="Machine\Commands\ForceBackupForMachine\ForceBackupForMachineCommandHandler.cs" />
+    <Compile Include="Machine\Commands\ForcePopulateForMachine\ForcePopulateForMachineCommand.cs" />
+    <Compile Include="Machine\Commands\MachineActionTriggeredEvent.cs" />
+    <Compile Include="Machine\DesiredStateEventHandler.cs" />
+    <Compile Include="Machine\Queries\GetMachineStats\GetMachineStatsQuery.cs" />
+    <Compile Include="Machine\UserOperationEventHandler.cs" />
+    <Compile Include="Mappings\MiscMappingProfile.cs" />
+    <Compile Include="Models\Dto\CloudBaseImageDto.cs" />
+    <Compile Include="Models\Dto\MachineStatsDto.cs" />
+    <Compile Include="Machine\Queries\GetSiteServerStatusForMachine\GetSiteServerStatusForMachineQuery.cs" />
+    <Compile Include="Audit\AuditLogEventHandler.cs" />
+    <Compile Include="Audit\Events\UserActionNotification.cs" />
+    <Compile Include="Audit\Queries\GetAuditLogs\GetAuditLogsQuery.cs" />
+    <Compile Include="CommandBase.cs" />
+    <Compile Include="Library\Commands\BatchDeleteLibraryFiles\BatchDeleteLibraryFilesCommand.cs" />
+    <Compile Include="Library\Commands\DeleteLibraryFile\DeleteLibraryFileCommand.cs" />
+    <Compile Include="Library\Queries\GetAllLibraryPackages\GetAllLibraryPackagesQuery.cs" />
+    <Compile Include="Library\Queries\GetAllLibraryPackages\GetAllLibraryPackagesQueryHandler.cs" />
+    <Compile Include="Machine\Commands\QueueOperations\QueueOperationsCommand.cs" />
+    <Compile Include="Machine\Commands\RestoreBackupForMachine\RestoreBackupForMachineCommand.cs" />
+    <Compile Include="Machine\Commands\RestoreBackupForMachine\RestoreBackupForMachineCommandHandler.cs" />
+    <Compile Include="Machine\Queries\GetSoftwareInfoForMachine\GetSoftwareInfoForMachineQuery.cs" />
+    <Compile Include="Mma\Queries\GetAllOperationTypes\GetAllOperationTypesQuery.cs" />
+    <Compile Include="Mma\Queries\GetAllOperationTypes\GetAllOperationTypesQueryHandler.cs" />
+    <Compile Include="Models\Dto\AccountInfoDto.cs" />
+    <Compile Include="Models\Dto\ContactDto.cs" />
+    <Compile Include="Models\Dto\CreatableMachineDto.cs" />
+    <Compile Include="Models\Dto\CustomerDto.cs" />
+    <Compile Include="Models\Dto\LicenseConfigDto.cs" />
+    <Compile Include="Models\Dto\MachineConfigDto.cs" />
+    <Compile Include="Models\Dto\MachineStateInfoDto.cs" />
+    <Compile Include="Models\Dto\MmaInstanceDto.cs" />
+    <Compile Include="Models\Dto\PackageDto.cs" />
+    <Compile Include="Notification\Commands\SendMessage\SendMessageCommand.cs" />
+    <Compile Include="Accounts\Commands\RecreateMachine\RecreateMachineCommand.cs" />
+    <Compile Include="Accounts\Commands\RecreateMachine\RecreateMachineCommandHandler.cs" />
+    <Compile Include="Accounts\Commands\ResetLastOperation\ResetLastOperationCommand.cs" />
+    <Compile Include="Accounts\Commands\ResetMachineFailureState\ResetMachineFailureStateCommand.cs" />
+    <Compile Include="Accounts\Commands\ResetMachineFailureState\ResetMachineFailureStateCommandHandler.cs" />
+    <Compile Include="Accounts\Commands\StartMachine\StartMachineCommand.cs" />
+    <Compile Include="Accounts\Commands\StartMachine\StartMachineCommandHandler.cs" />
+    <Compile Include="Accounts\Commands\UpdateAccount\UpdateAccountCommand.cs" />
+    <Compile Include="Accounts\Commands\UpdateAccount\UpdateAccountCommandHandler.cs" />
+    <Compile Include="Accounts\Commands\UpdateBackupSettings\UpdateBackupSettingsCommand.cs" />
+    <Compile Include="Accounts\Commands\UpdateBackupSettings\UpdateBackupSettingsCommandHandler.cs" />
+    <Compile Include="Accounts\Commands\UpdateIdleSchedule\UpdateIdleScheduleCommand.cs" />
+    <Compile Include="Accounts\Commands\UpdateIdleSchedule\UpdateIdleScheduleCommandHandler.cs" />
+    <Compile Include="Accounts\Commands\UpdateIdleSchedule\UpdateIdleScheduleCommandValidator.cs" />
+    <Compile Include="Accounts\Commands\UpdateInstanceSettings\UpdateInstanceSettingsCommand.cs" />
+    <Compile Include="Accounts\Commands\UpdateInstanceSettings\UpdateInstanceSettingsCommandHandler.cs" />
+    <Compile Include="Accounts\Commands\UpdateLicenseSettings\UpdateLicenseSettingsCommand.cs" />
+    <Compile Include="Accounts\Commands\UpdateLicenseSettings\UpdateLicenseSettingsCommandHandler.cs" />
+    <Compile Include="Accounts\Queries\DownloadAllKeys\DownloadAllKeysQuery.cs" />
+    <Compile Include="Accounts\Queries\DownloadAllKeys\DownloadAllKeysQueryHandler.cs" />
+    <Compile Include="Accounts\Queries\DownloadLicenseKeys\DownloadLicenseFileQuery.cs" />
+    <Compile Include="Accounts\Queries\DownloadLicenseKeys\DownloadLicenseKeysQueryHandler.cs" />
+    <Compile Include="Accounts\Queries\DownloadLicenseFile\DownloadLicenseFileQueryHandler.cs" />
+    <Compile Include="Accounts\Queries\DownloadLicenseFile\DownloadLicenseFileQuery.cs" />
+    <Compile Include="Caching\CachingExtensions.cs" />
+    <Compile Include="Exceptions\CommandException.cs" />
+    <Compile Include="Git\Queries\GetAllBranches\GetAllBranchesQuery.cs" />
+    <Compile Include="Git\Queries\GetAllBranches\GetAllBranchesQueryHandler.cs" />
+    <Compile Include="Ioc\IServiceClient.cs" />
+    <Compile Include="Mma\Queries\GetAllClasses\GetAllClassesQuery.cs" />
+    <Compile Include="Mma\Queries\GetAllClasses\GetAllClassesQueryHandler.cs" />
+    <Compile Include="Mappings\OperationTypeValueResolver.cs" />
+    <Compile Include="Mappings\StringVersionInfoConverter.cs" />
+    <Compile Include="Models\Dto\ClassDto.cs" />
+    <Compile Include="Models\Dto\DownloadableDto.cs" />
+    <Compile Include="Models\Dto\MessageDto.cs" />
+    <Compile Include="Models\Dto\OperationTypeDto.cs" />
+    <Compile Include="Models\Dto\SiteStatusDto.cs" />
+    <Compile Include="Notification\Commands\SendMessage\SendMessageCommandHandler.cs" />
+    <Compile Include="Notification\Queries\ListPendingMessage\ListPendingMessagesQuery.cs" />
+    <Compile Include="PagedData.cs" />
+    <Compile Include="Saas\Commands\CreateSite\CreateSiteCommand.cs" />
+    <Compile Include="Saas\Commands\CreateSite\CreateSiteCommandHandler.cs" />
+    <Compile Include="Saas\Commands\CreateSite\CreateSiteCommandValidator.cs" />
+    <Compile Include="Saas\Commands\CreateSite\SiteCreatedEvent.cs" />
+    <Compile Include="Saas\Commands\DeleteSite\DeleteSiteCommand.cs" />
+    <Compile Include="Saas\Queries\GetSiteStatus\GetSiteStatusQuery.cs" />
+    <Compile Include="Services\ILibraryFileService.cs" />
+    <Compile Include="Services\ITaskStatusUpdater.cs" />
+    <Compile Include="Services\TaskTrackingService.cs" />
+    <Compile Include="SoftwareUpdate\UpdateSoftwareForAccounts\UpdateSoftwareForAccountsCommandValidator.cs" />
+    <Compile Include="SoftwareUpdate\UpdateSoftwareForMachines\SoftwareForMachinesUpdatedEvent.cs" />
+    <Compile Include="SoftwareUpdate\UpdateSoftwareForMachines\UpdateSoftwareForMachinesCommandValidator.cs" />
+    <Compile Include="Templates\Commands\CreateOrUpdateGeneralTemplate\CreateOrUpdateGeneralTemplateCommandValidator.cs" />
+    <Compile Include="Templates\Commands\CreateOrUpdateBackupSettingsTemplate\CreateOrUpdateBackupSettingsTemplateCommand.cs" />
+    <Compile Include="Templates\Commands\CreateOrUpdateBackupSettingsTemplate\CreateOrUpdateBackupSettingsTemplateCommandHandler.cs" />
+    <Compile Include="Templates\Commands\CreateOrUpdateBackupSettingsTemplate\CreateOrUpdateBackupSettingsTemplateCommandValidator.cs" />
+    <Compile Include="Templates\Commands\CreateOrUpdateInstanceSettingsTemplate\CreateOrUpdateInstanceSettingsTemplateCommand.cs" />
+    <Compile Include="Templates\Commands\CreateOrUpdateInstanceSettingsTemplate\CreateOrUpdateInstanceSettingsTemplateCommandHandler.cs" />
+    <Compile Include="Templates\Commands\CreateOrUpdateGeneralTemplate\CreateOrUpdateGeneralTemplateCommand.cs" />
+    <Compile Include="Templates\Commands\CreateOrUpdateGeneralTemplate\CreateOrUpdateGeneralTemplateCommandHandler.cs" />
+    <Compile Include="Templates\Commands\CreateOrUpdateInstanceSettingsTemplate\CreateOrUpdateInstanceSettingsTemplateCommandValidator.cs" />
+    <Compile Include="Templates\Commands\CreateOrUpdateLicenseTemplate\CreateOrUpdateLicenseTemplateCommand.cs" />
+    <Compile Include="Templates\Commands\CreateOrUpdateLicenseTemplate\CreateOrUpdateLicenseTemplateCommandHandler.cs" />
+    <Compile Include="Templates\Commands\CreateOrUpdateLicenseTemplate\CreateOrUpdateLicenseTemplateCommandValidator.cs" />
+    <Compile Include="Accounts\Commands\DeactivateAccount\DeactivateAccountCommand.cs" />
+    <Compile Include="Accounts\Commands\DeactivateAccount\DeactivateAccountCommandHandler.cs" />
+    <Compile Include="Accounts\Commands\DeleteAccount\DeleteAccountCommand.cs" />
+    <Compile Include="Accounts\Commands\DeleteAccount\DeleteAccountCommandHandler.cs" />
+    <Compile Include="Accounts\Commands\StopMachine\StopMachineCommandHandler.cs" />
+    <Compile Include="Accounts\Commands\TerminateMachine\TerminateMachineCommand.cs" />
+    <Compile Include="Accounts\Commands\TerminateMachine\TerminateMachineCommandHandler.cs" />
+    <Compile Include="Accounts\Commands\StopMachine\StopMachineCommand.cs" />
+    <Compile Include="Accounts\Commands\UpdateMachine\UpdateMachineCommand.cs" />
+    <Compile Include="Accounts\Commands\UpdateMachine\UpdateMachineCommandHandler.cs" />
+    <Compile Include="Auth\IJwtTokenValidator.cs" />
+    <Compile Include="Caching\ICacheManager.cs" />
+    <Compile Include="SoftwareUpdate\UpdateSoftwareForMachines\UpdateSoftwareForMachinesCommand.cs" />
+    <Compile Include="SoftwareUpdate\UpdateSoftwareForMachines\UpdateSoftwareForMachinesCommandHandler.cs" />
+    <Compile Include="SoftwareUpdate\UpdateSoftwareForAccounts\UpdateSoftwareForAccountsCommand.cs" />
+    <Compile Include="SoftwareUpdate\UpdateSoftwareForAccounts\UpdateSoftwareForAccountsCommandHandler.cs" />
+    <Compile Include="Accounts\Queries\GetAccount\GetAccountQuery.cs" />
+    <Compile Include="Accounts\Queries\GetAccount\GetAccountQueryHandler.cs" />
+    <Compile Include="Accounts\Queries\GetAllAccounts\GetAllAccountsQuery.cs" />
+    <Compile Include="Accounts\Queries\GetAllAccounts\GetAllAccountsQueryHandler.cs" />
+    <Compile Include="Templates\Commands\DeleteTemplate\DeleteTemplateCommand.cs" />
+    <Compile Include="Templates\Commands\DeleteTemplate\DeleteTemplateCommandHandler.cs" />
+    <Compile Include="Templates\Queries\GetAllGeneralTemplates\GetAllGeneralTemplatesQuery.cs" />
+    <Compile Include="Templates\Queries\GetAllGeneralTemplates\GetAllGeneralTemplatesQueryHandler.cs" />
+    <Compile Include="Templates\Queries\GetAllBackupSettingsTemplates\GetAllBackupSettingsTemplatesQuery.cs" />
+    <Compile Include="Templates\Queries\GetAllBackupSettingsTemplates\GetAllBackupSettingsTemplatesQueryHandler.cs" />
+    <Compile Include="Templates\Queries\GetAllInstanceSettingsTemplates\GetAllInstanceSettingsTemplatesQueryHandler.cs" />
+    <Compile Include="Templates\Queries\GetAllInstanceSettingsTemplates\GetAllInstanceSettingsTemplatesQuery.cs" />
+    <Compile Include="Templates\Queries\GetAllLicenseTemplates\GetAllLicenseTemplatesQuery.cs" />
+    <Compile Include="Templates\Queries\GetAllLicenseTemplates\GetAllLicenseTemplatesQueryHandler.cs" />
+    <Compile Include="Machine\Queries\GetAllMachines\GetAllMachinesQuery.cs" />
+    <Compile Include="Machine\Queries\GetAllMachines\GetAllMachinesQueryHandler.cs" />
+    <Compile Include="Machine\Queries\GetAllOperationsForMachine\GetAllOperationsForMachineQuery.cs" />
+    <Compile Include="Machine\Queries\GetAllOperationsForMachine\GetAllOperationsForMachineQueryHandler.cs" />
+    <Compile Include="Accounts\Queries\GetAllSitesForAccount\GetAllSitesForAccountQuery.cs" />
+    <Compile Include="Accounts\Queries\GetAllSitesForAccount\GetAllSitesForAccountQueryHandler.cs" />
+    <Compile Include="Accounts\Queries\GetAllMachinesForAccount\GetAllMachinesForAccountQuery.cs" />
+    <Compile Include="Accounts\Queries\GetAllMachinesForAccount\GetAllMachinesForAccountQueryHandler.cs" />
+    <Compile Include="Auth\AccessToken.cs" />
+    <Compile Include="Auth\Commands\LoginCommand.cs" />
+    <Compile Include="Auth\Commands\LoginCommandHandler.cs" />
+    <Compile Include="Auth\IJwtFactory.cs" />
+    <Compile Include="Auth\IJwtTokenHandler.cs" />
+    <Compile Include="Auth\ITokerFactory.cs" />
+    <Compile Include="Cloud\Queries\GetAllInstanceTypes\GetAllInstanceTypesQuery.cs" />
+    <Compile Include="Cloud\Queries\GetAllInstanceTypes\GetAllInstanceTypesQueryHandler.cs" />
+    <Compile Include="Cloud\Queries\GetAllRegions\GetAllRegionsQuery.cs" />
+    <Compile Include="Cloud\Queries\GetAllRegions\GetAllRegionsQueryHandler.cs" />
+    <Compile Include="Exceptions\EntityNotFoundException.cs" />
+    <Compile Include="Git\Queries\GetCommitsForRepo\GetCommitsForRepoQuery.cs" />
+    <Compile Include="Git\Queries\GetCommitsForRepo\GetCommitsForRepoQueryHandler.cs" />
+    <Compile Include="Git\Queries\GetAllRepos\GetAllReposQuery.cs" />
+    <Compile Include="Git\Queries\GetAllRepos\GetAllReposQueryHandler.cs" />
+    <Compile Include="Infrastructure\RequestBehavior.cs" />
+    <Compile Include="ISoftwareVersionResolver.cs" />
+    <Compile Include="Key\AsymmetricKeyPair.cs" />
+    <Compile Include="Key\AsymmetricKeyUtils.cs" />
+    <Compile Include="Key\KeysManager.cs" />
+    <Compile Include="Library\Queries\GetAllLibraryFiles\GetAllLibraryFilesQuery.cs" />
+    <Compile Include="Library\Queries\GetAllLibraryFiles\GetAllLibraryFilesQueryHandler.cs" />
+    <Compile Include="License\LicenseUtils.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Mappings\CommandMappingProfile.cs" />
+    <Compile Include="Mappings\DtoMappingProfile.cs" />
+    <Compile Include="Mappings\ProfileBase.cs" />
+    <Compile Include="Models\Dto\AccountDto.cs" />
+    <Compile Include="Models\Dto\AccountListingDto.cs" />
+    <Compile Include="Models\Dto\CloudInstanceDto.cs" />
+    <Compile Include="Models\Dto\FileDto.cs" />
+    <Compile Include="Models\Dto\CloudInstanceTypeDto.cs" />
+    <Compile Include="Models\Dto\MachineDto.cs" />
+    <Compile Include="Models\Dto\OperationDto.cs" />
+    <Compile Include="Models\Dto\RegionDto.cs" />
+    <Compile Include="Models\Dto\RepoDto.cs" />
+    <Compile Include="Models\Dto\SiteDto.cs" />
+    <Compile Include="Models\Dto\StateDto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoftwareVersionResolver.cs" />
+    <Compile Include="Utils\AccountUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccountManager.Common\AccountManager.Common.csproj">
+      <Project>{C934E7A8-7B60-4A97-805B-11563E23EBC8}</Project>
+      <Name>AccountManager.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AccountManager.Domain\AccountManager.Domain.csproj">
+      <Project>{CE1854B2-C175-49FA-A847-567F79714565}</Project>
+      <Name>AccountManager.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Git\Commands\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
