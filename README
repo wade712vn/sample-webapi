@@ -1,0 +1,10 @@
+The source code is the implementation of a .NET WebAPI application that exposes some RESTful APIs for a single page application (not included)
+
+It uses a PostgreSQL database as the primary datastore. Entity Framework is used as the ORM
+It also uses an additional MongoDB database to store audit logs (user activities).
+The application authenticates users against a LDAP server and uses JWT as the means for authentication client requests
+
+The application follows CQRS pattern where APIs are divided into commands and queries
+Autofac is used for dependency injection
+
+Note: I have to exclude configuration values and unit tests from the source code before sharing because they contains some confidential data
